@@ -5,6 +5,8 @@ import Inicio from './Pages/Inicio';
 import Search from './Pages/Search';
 import Estatica from './Pages/Diseño';
 import EpisodioDetail from './Pages/EpisodioDetail';
+import PersonajeDetail from "./Pages/PersonajeDetail";
+
 function App() {
   return (
     <Router>
@@ -14,6 +16,7 @@ function App() {
         <Route path="/search" element={<Search/>} />
         <Route path="/estatica" element={<Estatica/>} />
         <Route path="episodio/:id" element={<EpisodioDetail />} />
+        <Route path="/personaje/:id" element={<PersonajeDetail />} />
       </Routes>
     </Router>
   );

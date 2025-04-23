@@ -48,12 +48,12 @@ function EpisodioDetail() {
 
   return (
     <div>
-      <h2 style={{textAlign: 'center'}}>{episodio.name}</h2>
+      <h2 style={{textAlign: 'center', fontSize:'2rem'}}>{episodio.name}</h2>
       <p style={{textAlign:'center'}}>Air date: {episodio.air_date}</p>
 
       {top3.length > 0 && (
         <>
-          <h3 style={{textAlign:'center', fontSize:'2rem'}}>🔥 Top 3 más likeados:</h3>
+          <h3 style={{textAlign:'center', fontSize:'2rem'}}>Top 3 más likeados:</h3>
           <div className='DestacadosPersonajes'>
             {top3.map(personaje => (
               <Personaje key={`top-${personaje.id}`} personaje={personaje} />
@@ -62,7 +62,7 @@ function EpisodioDetail() {
         </>
       )}
 
-      <h3>🎭 Personajes destacados:</h3>
+      <h3 style={{fontSize:'2rem', textAlign:'center'}}>🎭 Personajes destacados:</h3>
       <div className='SelectedPersonajes'>
         {seleccionados.map(personaje => (
           <Personaje key={`otros-${personaje.id}`} personaje={personaje} />
