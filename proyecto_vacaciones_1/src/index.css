@@ -80,3 +80,24 @@ body {
 .SearchForm option {
   color: black;
 }
+
+.Principal {
+  background-color: #FFFFFF;
+  width: 100%;
+  height: 100vh;
+}
+.Principio {
+  display: flex;
+}
+.Imagen {
+  background-image: url('https://i.pinimg.com/736x/ef/5c/8c/ef5c8cebfd8dec27e15b030d68539bfd.jpg');
+  width: 50%;
+  height: 60vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.Volver {
+  background-color: black;
+  width: 50%;
+  height: 60vh;
+}
