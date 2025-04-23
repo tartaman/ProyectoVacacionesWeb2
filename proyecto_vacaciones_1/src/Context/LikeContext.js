@@ -1,23 +1,29 @@
-import React, { createContext, useReducer } from 'react';
+import React, { createContext, useReducer, useEffect } from 'react';
+
+// Leer likes del localStorage al iniciar
+const storedLikes = JSON.parse(localStorage.getItem('likes')) || {};
+
+const initialState = storedLikes;
 
 const LikeContext = createContext();
 
-const initialState = {}; // { characterId: { likes: 0, dislikes: 0 } }
-
-function likeReducer(state, action) {
-  const { characterId } = action;
-  const current = state[characterId] || { likes: 0, dislikes: 0 };
-
+function reducer(state, action) {
   switch (action.type) {
     case 'LIKE':
       return {
         ...state,
-        [characterId]: { ...current, likes: current.likes + 1 },
+        [action.payload]: {
+          ...state[action.payload],
+          likes: (state[action.payload]?.likes || 0) + 1,
+        },
       };
     case 'DISLIKE':
       return {
         ...state,
-        [characterId]: { ...current, dislikes: current.dislikes + 1 },
+        [action.payload]: {
+          ...state[action.payload],
+          dislikes: (state[action.payload]?.dislikes || 0) + 1,
+        },
       };
     default:
       return state;
@@ -25,7 +31,12 @@ function likeReducer(state, action) {
 }
 
 export function LikeProvider({ children }) {
-  const [state, dispatch] = useReducer(likeReducer, initialState);
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  // Guardar en localStorage cada vez que cambia
+  useEffect(() => {
+    localStorage.setItem('likes', JSON.stringify(state));
+  }, [state]);
 
   return (
     <LikeContext.Provider value={{ state, dispatch }}>

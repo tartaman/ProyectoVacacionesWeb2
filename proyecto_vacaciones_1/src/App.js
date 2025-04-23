@@ -1,17 +1,19 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Menu from './Components/Menu';
+import Inicio from './Pages/Inicio';
+import Search from './Pages/Search';
+import Estatica from './Pages/Diseño';
 import EpisodioDetail from './Pages/EpisodioDetail';
-
 function App() {
   return (
     <Router>
-      <nav style={{ padding: '1rem' }}>
-        <Link to="/episodio/1">Episodio 1</Link> | <Link to="/episodio/2">Episodio 2</Link>
-      </nav>
-      <h1>Hola</h1>
+      <Menu/>
       <Routes>
-        <Route path="/episodio/:id" element={<EpisodioDetail />} />
-        <Route path="*" element={<h1>Selecciona un episodio</h1>} />
+        <Route path="/" element={<Inicio/>}/>
+        <Route path="/search" element={<Search/>} />
+        <Route path="/estatica" element={<Estatica/>} />
+        <Route path="episodio/:id" element={<EpisodioDetail />} />
       </Routes>
     </Router>
   );

@@ -1,4 +1,56 @@
+@font-face {
+  font-family: 'Andis Regular';
+  src: url('./Fonts/JAM\ Type\ Design\ -\ Andis\ Regular.otf');
+}
+@font-face {
+  font-family: 'Chocolate TT';
+  src: url('./Fonts/TT\ Chocolates\ Trial\ Light.otf');
+}
+h1, h2, h3 {
+  font-family: 'Andis Regular', Tahoma, Geneva, Verdana, sans-serif;
+}
+* {
+  font-family: 'Chocolate TT';
+  color: white;
+}
 body {
   padding: 0;
   margin: 0;
+  background-color: #272B33;
+}
+.EpisodeContainer {
+  background-color: #3C3E44;
+  width: 28%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.EpisodeContainer button {
+  padding: 1rem;
+  color: black;
+}
+.flexEpisodes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.PersonajeContainer {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.PersonajeContainer  button{
+  color: black;
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 20%;
+}
+.DestacadosPersonajes {
+  display: flex;
+}
+.SelectedPersonajes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }

@@ -1,5 +1,5 @@
 import React from 'react';
 
 export default function Search() {
-  return <h1>Sobre Mí</h1>;
+  return <h1>Búsqueda</h1>;
 }
