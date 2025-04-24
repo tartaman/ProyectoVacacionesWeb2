@@ -1,0 +1,10 @@
+.hero {
+  display: 	flex;
+  height:40vh;
+  width: 100%;
+  border: 1px solid black;
+  background-image: url('https://cdn.pixabay.com/photo/2019/07/15/08/32/australia-4338882_1280.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
