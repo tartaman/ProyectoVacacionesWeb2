@@ -5,6 +5,7 @@ import Inicio from './Pages/Inicio';
 import Search from './Pages/Search';
 import Estatica from './Pages/Diseño';
 import EpisodioDetail from './Pages/EpisodioDetail';
+import Personaje from './Pages/Personaje';
 import PersonajeDetail from "./Pages/PersonajeDetail";
 
 function App() {

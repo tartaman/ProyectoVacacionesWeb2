@@ -26,10 +26,12 @@ const PersonajeDetail = () => {
   if (!personaje) return <p>Personaje no encontrado.</p>;
 
   return (
-    <div className="p-6">
-      <h1 className="text-3xl font-bold mb-4">{personaje.name}</h1>
-      <img src={personaje.image} alt={personaje.name} className="rounded-xl shadow-md w-60 h-60 mb-4" />
-      <ul className="space-y-1 text-lg">
+    <div className="detalladoPersonaje">
+      <div>
+        <h1 className="text-3xl font-bold mb-4">{personaje.name}</h1>
+        <img src={personaje.image} alt={personaje.name} className="rounded-xl shadow-md w-60 h-60 mb-4" />
+      </div>
+      <ul className="listData" style={{alignSelf:'end'}}>
         <li><strong>Estado:</strong> {personaje.status}</li>
         <li><strong>Especie:</strong> {personaje.species}</li>
         <li><strong>Género:</strong> {personaje.gender}</li>
