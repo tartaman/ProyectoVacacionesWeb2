@@ -4,12 +4,11 @@ export default function Card({ house }) {
   return (
     <div style={{
       border: '1px solid #2c3e50',
-      borderRadius: '1rem',
+      borderRadius: '.1rem',
       overflow: 'hidden',
       width: '350px',
       fontFamily: 'Arial, sans-serif',
-      color: 'white',
-      backgroundColor: 'rgba(0,0,0,0)'
+      color: 'white'
     }}>
       <div style={{ position: 'relative' }}>
         <img
@@ -36,8 +35,8 @@ export default function Card({ house }) {
         )}
       </div>
 
-      <div style={{ padding: '1rem', backgroundColor: '#1b263b' }}>
-        <h3 style={{ margin: '0 0 0.5rem', fontSize: '1.2rem' }}>{house.title}</h3>
+      <div style={{ padding: '1rem', backgroundColor: '' }}>
+        <h3 style={{ margin: '0 0 0', fontSize: '1.2rem' }}>{house.title}</h3>
         <p style={{ fontSize: '0.9rem', color: '#d9d9d9' }}>{house.description}</p>
 
         <div style={{ display: 'flex', gap: '1rem', marginTop: '1rem', fontSize: '0.9rem' }}>
