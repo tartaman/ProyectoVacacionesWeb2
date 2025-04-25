@@ -1,10 +1,42 @@
+body {
+  background-color: #030713;
+}
 .hero {
   display: 	flex;
-  height:40vh;
+  height:60vh;
   width: 100%;
-  border: 1px solid black;
   background-image: url('https://cdn.pixabay.com/photo/2019/07/15/08/32/australia-4338882_1280.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+.herocontainer {
+  margin: auto 2rem;
+}
+.hero h2 {
+  color: white;
+  font-weight: 200;
+  font-size: 1rem;
+}
+.hero input {
+  padding: 1rem;
+  width: 100%;
+  height: .7rem;
+  border-radius: .5rem;
+  border:none;
+}
+.container {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 5rem;
+  justify-content: space-evenly;
+}
+
+.cardbody {
+  border: 1px solid white;
+  border-radius: 1rem;
+}
+.cardbody * {
+  color: white;
 }
